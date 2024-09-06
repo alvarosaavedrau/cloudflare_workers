@@ -25,7 +25,7 @@ async function generateQRCode(req: Request): Promise<Response> {
 const landing = `
 <h1>QR Generator</h1>
 <p>Click the below button to generate a new QR code.</p>
-<input type="text" id="text" value="https://alvarosaavedra.cloud"></input>
+<input type="text" id="text" value="https://alvarosaavedra.cloud" style="width: 300px;"></input>
 <button onclick="generate()">Generate QR Code</button>
 <br>
 <img id="qr" src="#" style="width: 300px; height: auto;" />
