@@ -17,7 +17,7 @@ export default {
 async function generateQRCode(req: Request): Promise<Response> {
     const { text } = await req.json();
     const headers = { 'Content-Type': 'image/png' };
-    const qr_png = qr.imageSync(text || 'Enter your link', { type: 'png', size: 10 });
+    const qr_png = qr.imageSync(text || 'https://alvarosaavedra.cloud', { type: 'png', size: 10 });
     return new Response(qr_png, { headers });
 }
 
@@ -25,7 +25,7 @@ async function generateQRCode(req: Request): Promise<Response> {
 const landing = `
 <h1>QR Generator</h1>
 <p>Click the below button to generate a new QR code.</p>
-<input type="text" id="text" value="Enter your link"></input>
+<input type="text" id="text" value="https://alvarosaavedra.cloud"></input>
 <button onclick="generate()">Generate QR Code</button>
 <br>
 <img id="qr" src="#" style="width: 300px; height: auto;" />
