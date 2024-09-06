@@ -12,8 +12,8 @@ async function handleRequest(request) {
     if (!action || !text) {
         return new Response(`Usage:
 
-  Encode: https://b64.alvarosaavedra.net/?action=encode&text=tuTexto
-  Decode: https://b64.alvarosaavedra.net/?action=decode&text=tuTexto`, {
+  Encode: https://b64.alvarosaavedra.es/?action=encode&text=yourText
+  Decode: https://b64.alvarosaavedra.es/?action=decode&text=yourText`, {
             status: 400,
             headers: {
                 'Content-Type': 'text/plain; charset=utf-8'
